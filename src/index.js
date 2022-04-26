@@ -5,6 +5,12 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import ReactDom from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-social/bootstrap-social.css';
+import 'font-awesome/css/font-awesome.css';
+import 'typeface-roboto';
+import 'typeface-open-sans';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
