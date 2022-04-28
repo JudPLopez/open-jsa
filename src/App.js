@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './components/MainComponent';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      Open JSA
-    </div>
-  );
+//should this be a class component?
+
+class App extends Component {
+  render() {
+      return (
+        <BrowserRouter>
+            <div className="App">
+                <Main />
+            </div>
+        </BrowserRouter>
+      );
+  }
 }
 
 export default App;
