@@ -1,15 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
+import JobAnalysis from './JobAnalysis';
+import JobDetails from './JobDetails';
+import WorkerDetails from './WorkerDetails';
 
 function Jsa() {
+  const [page, setPage] = useState(0);
+
+  const FormTitles = ['Job Details', 'Job Analysis', 'Worker Information'];
+
+  const PageDisplay = () => {
+    if (page === 0) {
+      return <JobDetails />;
+    } else if (page === 1) {
+      return <JobAnalysis />;
+    } else {
+      return <WorkerDetails />
+    }
+  }
+
   return (
     <div className='jsa'>
       <div className='progressbar'></div>
       <div className='form-container'>
-        <div className='header'></div>
-        <div className='form-body'></div>
+        <div className='header'>
+          <h1>{FormTitles[page]}</h1>
+        </div>
+        <div className='form-body'>{PageDisplay()}</div>
         <div className='form-footer'>
-          <button>Previous Step</button>
-          <button>Next</button>
+          <button
+            disabled={page === 0}
+            onClick={() => {
+              setPage((currPage) => currPage - 1);
+              }}
+          >
+            Previous Step
+          </button>
+          <button
+            disabled={page === FormTitles.length - 1} 
+            onClick={() => {
+              setPage((currPage) => currPage + 1);
+              }}
+            >
+              Next Step
+          </button>
         </div>
       </div>
     </div>
