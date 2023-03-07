@@ -1,3 +1,5 @@
+Open JSA is a simple online form to create a job safety analysis.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
