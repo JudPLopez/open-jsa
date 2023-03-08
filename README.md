@@ -1,4 +1,6 @@
-Open JSA is a simple online form to create a job safety analysis.
+Open JSA is a simple online form to create a job safety analysis(JSA). It was made with react-bootstrap.
+
+The purpose of the project is to create a web application that allows workers to conduct a JSA without cost. JSA's are simple but have the ability to reduce injuries and save lives in both high and low risk work environments. 
 
 # Getting Started with Create React App
 
