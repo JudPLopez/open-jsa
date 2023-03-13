@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import JobAnalysis from './JobAnalysis';
 import JobDetails from './JobDetails';
-import WorkerDetails from './WorkerDetails';
+import SignatureForm from './SignatureForm';
 
 function Jsa() {
   const [page, setPage] = useState(0);
 
-  const FormTitles = ['Job Details', 'Job Analysis', 'Worker Information'];
+  const FormTitles = ['Job Details', 'Job Analysis', 'Employee Information'];
 
   const PageDisplay = () => {
     if (page === 0) {
@@ -14,7 +14,7 @@ function Jsa() {
     } else if (page === 1) {
       return <JobAnalysis />;
     } else {
-      return <WorkerDetails />
+      return <SignatureForm />
     }
   }
 

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+.signature-input{
+    font-family: 'Pinyon Script' , cursive;
+    font-size: '24px';
+    border: 'none';
+    outline: 'none';
+    width: 'auto';
+};
+
+.signature-canvas {
+    width: 100%; /* set the canvas width to 100% of the parent container */
+    height: 200px; /* set the canvas height to a fixed value */
+  }
+  
+  @media (min-width: 768px) {
+    /* for screens larger than 768px, increase the canvas height */
+    .signature-canvas {
+      height: 300px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* for screens larger than 992px, increase the canvas height again */
+    .signature-canvas {
+      height: 400px;
+    }
+  }
