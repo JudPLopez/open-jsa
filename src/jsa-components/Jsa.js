@@ -31,6 +31,14 @@ function Jsa() {
     }
   }
 
+  function handleStateChange(event) {
+    const newState = event.target.value;
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      state: newState
+    }));
+  }  
+
   return (
     <div className='jsa'>
       <div className='progressbar'></div>

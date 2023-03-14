@@ -8,10 +8,12 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 function JobDetails({formData, setFormData}) {
-    const [selectedState, setSelectedState] = useState('');
+    const [selectedState, setSelectedState] = useState(formData.state);
     
     const handleStateChange = (e) => {
-        setSelectedState(e.target.value)};
+        setSelectedState(e.target.value);
+        setFormData({...formData, state: e.target.value}); // trtying to update the state value in formData
+      };
     
     const handlePpeChange = (value) => {
         setFormData({...formData, ppe: value})
