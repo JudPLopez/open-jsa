@@ -5,12 +5,25 @@ import SignatureForm from './SignatureForm';
 
 function Jsa() {
   const [page, setPage] = useState(0);
+  const [formData, setFormData] = useState ({
+    date: '',
+    workOrder: '',
+    tasks: '',
+    addressOne: '',
+    addressTwo: '',
+    city: '',
+    state: '',
+    zip: 0,
+    supervisor: '',
+    preparer: '',
+    ppe: '',
+  }) 
 
   const FormTitles = ['Job Details', 'Job Analysis', 'Employee Information'];
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <JobDetails />;
+      return <JobDetails formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <JobAnalysis />;
     } else {

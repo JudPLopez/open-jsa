@@ -13,7 +13,9 @@ function StatePicker(props) {
   return (
     <Form.Group controlId="stateSelect">
       <Form.Label>State</Form.Label>
-      <Form.Select value={props.value} onChange={props.onChange}>
+      <Form.Select 
+        value={props.value} 
+        onChange={props.onChange}>
         <option value="">Choose</option>
         {states.map((state) => (
           <option key={state} value={state}>{state}</option>

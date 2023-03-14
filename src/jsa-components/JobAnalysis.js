@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import React from 'react';
 import Form from 'react-bootstrap/form';
-import FormGroup from 'react-bootstrap/FormGroup';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/row';
 
 function JobAnalysis() {
     const [selectedState, setSelectedState] = useState('');
